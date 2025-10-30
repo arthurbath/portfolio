@@ -98,6 +98,12 @@ main#content { display: grid; gap: 88px; }
 a { color: inherit; text-decoration-color: #000; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-thickness: 2px; }
 
+@media (max-width: 768px) {
+  .carousel {
+    height: 320px; /* shorter for mobile portrait */
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .carousel .slide { transition: none; }
 }
