@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/compress-images.cjs",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.4",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
+  }
+}
