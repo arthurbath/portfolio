@@ -1,0 +1,52 @@
+{
+  "header": {
+    "name": "Art Bath",
+    "city": "San Diego, CA",
+    "email": "arthurbath@icloud.com",
+    "linkedin": "linkedin.com/in/arthurbath",
+    "abilities": "Product Manager · Designer · Frontend Dev",
+    "logline": "Building products customers love"
+  },
+  "projects": [
+    {
+      "id": "msr-insights",
+      "title": "Measurabl: Insights",
+      "subtitle": "Analytics suite for assessing portfolio sustainability performance",
+      "roles": "Customer discovery, solution ideation, prototyping, tool selection, usability testing, information architecture, dashboard design, product ownership, efficacy analysis",
+      "images": [
+        { "src": "/images/insights-carbon-dash.png" },
+        { "src": "/images/insights-sust-perf-1.png" },
+        { "src": "/images/insights-sust-perf-2.png" },
+        { "src": "/images/insights-sust-perf-3.png" }
+      ],
+      "description": "The Insights business intelligence tool enables real estate professionals to peruse their portfolio's sustainability performance data, discover behavior patterns and enrichment opportunities, apply bespoke data transformations, and generate rich reports for their stakeholders. It includes a suite of default reports with standard filtering and normalization options."
+    },
+    {
+      "id": "msr-trends",
+      "title": "Measurabl: Trends",
+      "subtitle": "Real estate portfolio sustainability trend analytics tool",
+      "roles": "Customer discovery, solution ideation, prototyping, usability testing, product ownership, FE development, efficacy analysis",
+      "images": [
+        { "src": "/images/trends-wire.png" },
+        { "src": "/images/trends-v2-chart.png" },
+        { "src": "/images/trends-v3-chart.png" }
+      ],
+      "description": "Measurabl's Trends is a simple data visualization tool that enables real estate professionsals to evaluate trends in their portfolio's sustainability performance, perform simple filtering and normalization, and detect patterns and outliers. With the launch of the more-sophisticated Insights tool, Trends became a means to entice customers to engage with their data before upselling them the Insights product."
+    },
+    {
+      "id": "msr-reports",
+      "title": "Measurabl: Framework Reporting",
+      "subtitle": "Reporting real estate sustainability performance to strict frameworks",
+      "roles": "Customer discovery, solution ideation, prototyping, usability testing, mathematical specs, product ownership, FE development, efficacy analysis",
+      "images": [
+        { "src": "/images/report-overview.png" },
+        { "src": "/images/report-survey.png" },
+        { "src": "/images/report-survey-summary.png" },
+        { "src": "/images/report-data-summary.png" }
+      ],
+      "description": "Measurabl's framework reporting solution guides customers through the process of reporting their portfolio's sustainability performance step-by-step, simplifying what was once a complicated, manual process."
+    }
+  ]
+}
+
+
