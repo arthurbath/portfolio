@@ -10,41 +10,55 @@
   "projects": [
     {
       "id": "msr-insights",
-      "title": "Measurabl: Insights",
-      "subtitle": "Analytics suite for assessing portfolio sustainability performance",
-      "roles": "Customer discovery, solution ideation, prototyping, tool selection, usability testing, information architecture, dashboard design, product ownership, efficacy analysis",
+      "title": "Measurabl: Insights Module",
+      "subtitle": "Customizable analytics for real estate sustainability data",
+      "roles": "Led discovery and ideation, prototyped features with AI, defined information architecture and dashboards, and oversaw product rollout and efficacy analysis",
       "images": [
         { "src": "/images/insights-carbon-dash.png" },
         { "src": "/images/insights-sust-perf-1.png" },
         { "src": "/images/insights-sust-perf-2.png" },
         { "src": "/images/insights-sust-perf-3.png" }
       ],
-      "description": "The Insights business intelligence tool enables real estate professionals to peruse their portfolio's sustainability performance data, discover behavior patterns and enrichment opportunities, apply bespoke data transformations, and generate rich reports for their stakeholders. It includes a suite of default reports with standard filtering and normalization options."
+      "description": "A flexible analytics tool that helps real estate teams explore sustainability data, spot trends and improvement opportunities, and share clear, customized reports. Includes ready-made dashboards with rich filtering and normalization options."
     },
     {
       "id": "msr-trends",
-      "title": "Measurabl: Trends",
-      "subtitle": "Real estate portfolio sustainability trend analytics tool",
-      "roles": "Customer discovery, solution ideation, prototyping, usability testing, product ownership, FE development, efficacy analysis",
+      "title": "Measurabl: Portfolio Trends Feature",
+      "subtitle": "Lightweight analytics for portfolio performance",
+      "roles": "Drove customer discovery, prototyping, and frontend development; ran usability testing; and managed feature rollout and impact analysis",
       "images": [
         { "src": "/images/trends-wire.png" },
         { "src": "/images/trends-v2-chart.png" },
         { "src": "/images/trends-v3-chart.png" }
       ],
-      "description": "Measurabl's Trends is a simple data visualization tool that enables real estate professionsals to evaluate trends in their portfolio's sustainability performance, perform simple filtering and normalization, and detect patterns and outliers. With the launch of the more-sophisticated Insights tool, Trends became a means to entice customers to engage with their data before upselling them the Insights product."
+      "description": "A streamlined analytics tool for visualizing real estate sustainability trends. Enables filtering, normalization, and quick pattern discovery. Serves as an entry-level product that introduces users to Measurabl's analytics capabilities."
+    },
+    {
+      "id": "msr-disclosure",
+      "title": "Measurabl: Disclosure Module",
+      "subtitle": "Unified sustainability reporting across multiple frameworks",
+      "roles": "Led research and ideation, built AI-based prototypes, wrote mathematical specs, oversaw development and rollout, and analyzed efficacy",
+      "images": [
+        { "src": "/images/disclosure-overview.png" },
+        { "src": "/images/disclosure-report-details.png" },
+        { "src": "/images/disclosure-report-details-2.png" },
+        { "src": "/images/disclosure-report-settings.png" },
+        { "src": "/images/disclosure-report-data-quality.png" }
+      ],
+      "description": "A single interface for reporting to multiple sustainability frameworks, each with unique rules. Lets users fine-tune how each property is disclosed, replacing costly manual consulting workflows."
     },
     {
       "id": "msr-reports",
-      "title": "Measurabl: Framework Reporting",
-      "subtitle": "Reporting real estate sustainability performance to strict frameworks",
-      "roles": "Customer discovery, solution ideation, prototyping, usability testing, mathematical specs, product ownership, FE development, efficacy analysis",
+      "title": "Measurabl: Framework Reporting Feature (Legacy)",
+      "subtitle": "Step-by-step sustainability reporting made simple",
+      "roles": "Researched customer pain points, designed UI, developed frontend, and managed the feature through its entire lifecycle",
       "images": [
         { "src": "/images/report-overview.png" },
         { "src": "/images/report-survey.png" },
         { "src": "/images/report-survey-summary.png" },
         { "src": "/images/report-data-summary.png" }
       ],
-      "description": "Measurabl's framework reporting solution guides customers through the process of reporting their portfolio's sustainability performance step-by-step, simplifying what was once a complicated, manual process."
+      "description": "An early reporting tool that guided customers through sustainability disclosures step by step, replacing a complex manual process. Later superseded by the more advanced Disclosure module."
     }
   ]
 }
