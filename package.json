@@ -1,13 +1,29 @@
 {
   "name": "portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Manifest-driven single-page portfolio website with elegant black-and-white design",
+  "author": "Art Bath",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arthurbath/portfolio.git"
+  },
+  "homepage": "https://github.com/arthurbath/portfolio#readme",
+  "keywords": [
+    "portfolio",
+    "vite",
+    "typescript",
+    "single-page"
+  ],
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/compress-images.cjs",
+    "prebuild": "node scripts/validate-manifest.cjs && node scripts/compress-images.cjs",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext ts",
+    "format": "prettier --write \"src/**/*.{ts,css,json}\""
   },
   "devDependencies": {
     "sharp": "^0.34.4",

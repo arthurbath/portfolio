@@ -13,12 +13,30 @@ export function createCarousel(project: Project): HTMLElement {
 
     const image = document.createElement('img')
     image.src = img.src
-    image.alt = img.alt
+    image.alt = img.alt || `Project image ${idx + 1}`
+    // Only lazy load images beyond the first two (first is active, second will be preloaded)
+    if (idx > 1) {
+      image.loading = 'lazy'
+    }
+    // Add error handling
+    image.addEventListener('error', () => {
+      image.alt = 'Image failed to load'
+      console.warn(`Failed to load image: ${img.src}`)
+    })
     slide.appendChild(image)
 
     slides.push(slide)
     container.appendChild(slide)
   })
+
+  // Preload next image after first slide loads
+  if (project.images.length > 1) {
+    const preloadLink = document.createElement('link')
+    preloadLink.rel = 'preload'
+    preloadLink.as = 'image'
+    preloadLink.href = project.images[1].src
+    document.head.appendChild(preloadLink)
+  }
 
   // Thumbnails
   const thumbs = document.createElement('div')
@@ -27,10 +45,12 @@ export function createCarousel(project: Project): HTMLElement {
   project.images.forEach((img, idx) => {
     const btn = document.createElement('button')
     btn.type = 'button'
+    btn.setAttribute('aria-label', `View image ${idx + 1} of ${project.images.length}: ${img.alt || 'Project image'}`)
     if (idx === 0) btn.setAttribute('aria-current', 'true')
     const t = document.createElement('img')
     t.src = img.src
-    t.alt = ''
+    t.alt = img.alt || `Thumbnail ${idx + 1}`
+    t.setAttribute('role', 'presentation')
     btn.appendChild(t)
     btn.addEventListener('click', () => goTo(idx))
     thumbs.appendChild(btn)
@@ -51,6 +71,16 @@ export function createCarousel(project: Project): HTMLElement {
     buttons.forEach(b => b.removeAttribute('aria-current'))
     buttons[next].setAttribute('aria-current', 'true')
     active = next
+
+    // Preload next image
+    const nextIdx = (next + 1) % project.images.length
+    if (nextIdx !== next && !document.querySelector(`link[href="${project.images[nextIdx].src}"]`)) {
+      const preloadLink = document.createElement('link')
+      preloadLink.rel = 'preload'
+      preloadLink.as = 'image'
+      preloadLink.href = project.images[nextIdx].src
+      document.head.appendChild(preloadLink)
+    }
   }
 
   function step() {
@@ -70,8 +100,9 @@ export function createCarousel(project: Project): HTMLElement {
   wrapper.addEventListener('mouseenter', stop)
   wrapper.addEventListener('mouseleave', start)
 
-  wrapper.tabIndex = 0
-  wrapper.addEventListener('keydown', (e) => {
+  container.setAttribute('tabindex', '0')
+  container.setAttribute('aria-roledescription', 'carousel')
+  container.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo((active + 1) % slides.length) }
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo((active - 1 + slides.length) % slides.length) }
   })
