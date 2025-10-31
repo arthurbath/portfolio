@@ -59,6 +59,16 @@
         { "src": "/images/report-data-summary.png" }
       ],
       "description": "An early reporting tool that guided customers through sustainability disclosures step by step, replacing a complex manual process. Later superseded by the more advanced Disclosure module."
+    },
+    {
+      "id": "cnc",
+      "title": "Collins & Coupe: Splash Page",
+      "subtitle": "Single-page site for a local bartending supply shop",
+      "roles": "Designed and built the site, implemented SEO and analytics, and automated content updates via Yelp data integration",
+      "images": [
+        { "src": "/images/cnc-landing.png" }
+      ],
+      "description": "A minimal, high-visibility splash page for a neighborhood bartending supply shop. Business details and hours were pulled directly from Yelp to ensure consistency across platforms. The design prioritized simplicity, enabling the owner to easily manage updates and highlight special closures. SEO optimizations and analytics tracking improved local search visibility and customer insights."
     }
   ]
 }

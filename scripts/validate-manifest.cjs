@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-/* Validate manifest.json for missing alt text and other issues */
+/* Validate portfolio-data.json for missing alt text and other issues */
 const fs = require('fs')
 const path = require('path')
 
-const manifestPath = path.resolve(process.cwd(), 'src', 'manifest.json')
+const manifestPath = path.resolve(process.cwd(), 'src', 'portfolio-data.json')
 
 if (!fs.existsSync(manifestPath)) {
   console.error('[validate] Manifest not found:', manifestPath)

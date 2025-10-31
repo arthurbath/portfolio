@@ -38,27 +38,31 @@ export function createCarousel(project: Project): HTMLElement {
     document.head.appendChild(preloadLink)
   }
 
-  // Thumbnails
+  // Thumbnails (only show if more than 1 image)
   const thumbs = document.createElement('div')
   thumbs.className = 'thumbs'
 
-  project.images.forEach((img, idx) => {
-    const btn = document.createElement('button')
-    btn.type = 'button'
-    btn.setAttribute('aria-label', `View image ${idx + 1} of ${project.images.length}: ${img.alt || 'Project image'}`)
-    if (idx === 0) btn.setAttribute('aria-current', 'true')
-    const t = document.createElement('img')
-    t.src = img.src
-    t.alt = img.alt || `Thumbnail ${idx + 1}`
-    t.setAttribute('role', 'presentation')
-    btn.appendChild(t)
-    btn.addEventListener('click', () => goTo(idx))
-    thumbs.appendChild(btn)
-  })
+  if (project.images.length > 1) {
+    project.images.forEach((img, idx) => {
+      const btn = document.createElement('button')
+      btn.type = 'button'
+      btn.setAttribute('aria-label', `View image ${idx + 1} of ${project.images.length}: ${img.alt || 'Project image'}`)
+      if (idx === 0) btn.setAttribute('aria-current', 'true')
+      const t = document.createElement('img')
+      t.src = img.src
+      t.alt = img.alt || `Thumbnail ${idx + 1}`
+      t.setAttribute('role', 'presentation')
+      btn.appendChild(t)
+      btn.addEventListener('click', () => goTo(idx))
+      thumbs.appendChild(btn)
+    })
+  }
 
   const wrapper = document.createElement('div')
   wrapper.appendChild(container)
-  wrapper.appendChild(thumbs)
+  if (project.images.length > 1) {
+    wrapper.appendChild(thumbs)
+  }
 
   let active = 0
   let timer: number | undefined
@@ -67,9 +71,11 @@ export function createCarousel(project: Project): HTMLElement {
     if (next === active) return
     slides[active].classList.remove('is-active')
     slides[next].classList.add('is-active')
-    const buttons = Array.from(thumbs.querySelectorAll('button'))
-    buttons.forEach(b => b.removeAttribute('aria-current'))
-    buttons[next].setAttribute('aria-current', 'true')
+    if (project.images.length > 1) {
+      const buttons = Array.from(thumbs.querySelectorAll('button'))
+      buttons.forEach(b => b.removeAttribute('aria-current'))
+      buttons[next].setAttribute('aria-current', 'true')
+    }
     active = next
 
     // Preload next image
@@ -107,7 +113,9 @@ export function createCarousel(project: Project): HTMLElement {
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo((active - 1 + slides.length) % slides.length) }
   })
 
-  start()
+  if (project.images.length > 1) {
+    start()
+  }
   return wrapper
 }
 

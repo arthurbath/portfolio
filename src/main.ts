@@ -1,7 +1,7 @@
 import './styles.css'
 import { renderApp } from './render'
 import type { Manifest } from './types'
-import manifestJson from './manifest.json'
+import manifestJson from './portfolio-data.json'
 
 const app = document.querySelector<HTMLDivElement>('#app')
 if (!app) {
