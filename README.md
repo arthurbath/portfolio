@@ -9,7 +9,7 @@ Drop raw images in `public/images/<project>/...` while developing.
 
 ## Content
 
-- Edit `src/manifest.json` to add header and projects.
+- Edit `src/portfolio-data.json` to add header and projects.
 - Each project:
   - `title`, `subtitle`, `description`
   - `images`: array of `{ src, alt }` where `src` points to `/images/...` under `public/images`.
