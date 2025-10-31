@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: 
-
-
+Sitemap: https://portfolio.bath.black/sitemap.xml
 

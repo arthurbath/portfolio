@@ -4,13 +4,6 @@ import { createPortfolioEntry } from './components/PortfolioEntry'
 export function renderApp(root: HTMLElement, manifest: Manifest) {
   root.innerHTML = ''
 
-  // Skip navigation link for keyboard users
-  const skipLink = document.createElement('a')
-  skipLink.href = '#content'
-  skipLink.className = 'skip-link'
-  skipLink.textContent = 'Skip to main content'
-  root.appendChild(skipLink)
-
   const container = document.createElement('div')
   container.className = 'container'
 

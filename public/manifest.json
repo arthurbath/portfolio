@@ -1,12 +1,12 @@
 {
   "name": "Art Bath - Portfolio",
   "short_name": "Art Bath",
-  "description": "Product Manager, Designer, and Frontend Developer portfolio",
+  "description": "Product Manager, Designer, and Frontend Developer Portfolio",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0e0e0e",
-  "orientation": "portrait-primary",
+  "orientation": "landscape-primary",
   "icons": [
     {
       "src": "/favicon.png",
@@ -15,6 +15,3 @@
     }
   ]
 }
-
-
-
