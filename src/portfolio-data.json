@@ -69,8 +69,22 @@
         { "src": "/images/cnc-landing.png" }
       ],
       "description": "A minimal, high-visibility splash page for a neighborhood bartending supply shop. Business details and hours were pulled directly from Google Maps to ensure consistency across platforms. The design prioritized simplicity, enabling the owner to easily manage updates and highlight special closures. SEO optimizations and analytics tracking improved local search visibility and customer insights."
+    },
+    {
+      "id": "gary-logan-wedding",
+      "title": "Gary & Logan Wedding",
+      "subtitle": "Custom wedding website crafted for a refined, modern couple",
+      "roles": "Designed and developed the website, including advanced functionality powered by 3rd-party integrations",
+      "images": [
+        { "src": "/images/gary-logan-ceremony.png", "alt": "Ceremony details with date, time, and La Jolla location" },
+        { "src": "/images/gary-logan-brunch.png", "alt": "Mimosa brunch invitation with date and venue information" },
+        { "src": "/images/gary-logan-rsvp-1.png", "alt": "Wedding RSVP form asking for names and attendance" },
+        { "src": "/images/gary-logan-rsvp-2.png", "alt": "Wedding RSVP form with mimosa brunch attendance field" },
+        { "src": "/images/gary-logan-rsvp-closed.png", "alt": "RSVP closed message with submit button and heart photo" },
+        { "src": "/images/gary-logan-thankyou.png", "alt": "Thank you banner over a black and white couple photo" }
+      ],
+      "description": "A custom wedding website designed to harmonize the aesthetic preferences of both partners. Key features included a branching RSVP workflow with automated spreadsheet integration, a guest photo gallery for attendee uploads, and a digital guestbook for wellwishes. The site was designed for easy wayfinding, usability on mobile devices, and enabling the event planner to efficiently access and manage RSVP data."
     }
   ]
 }
-
 
