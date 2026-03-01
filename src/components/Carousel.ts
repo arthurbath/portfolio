@@ -6,6 +6,17 @@ export function createCarousel(project: Project): HTMLElement {
   container.setAttribute('role', 'region')
   container.setAttribute('aria-label', `${project.title} images`)
 
+  if (project.images.length === 0) {
+    const emptyState = document.createElement('div')
+    emptyState.className = 'slide is-active'
+    emptyState.textContent = 'Images coming soon.'
+    container.appendChild(emptyState)
+
+    const wrapper = document.createElement('div')
+    wrapper.appendChild(container)
+    return wrapper
+  }
+
   const slides: HTMLDivElement[] = []
   project.images.forEach((img, idx) => {
     const slide = document.createElement('div')
@@ -118,5 +129,4 @@ export function createCarousel(project: Project): HTMLElement {
   }
   return wrapper
 }
-
 

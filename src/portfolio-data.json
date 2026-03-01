@@ -2,12 +2,30 @@
   "header": {
     "name": "Art Bath",
     "city": "San Diego, CA",
-    "email": "arthurbath@icloud.com",
+    "email": "art@bath.garden",
     "linkedin": "linkedin.com/in/arthurbath",
-    "abilities": "Product Manager · Designer · Web Developer",
-    "logline": "Building products customers love"
+    "abilities": "Software Maker",
+    "logline": "I make software that people love."
   },
   "projects": [
+    {
+      "id": "bathos",
+      "title": "BathOS",
+      "subtitle": "Placeholder project",
+      "roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "images": [],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "hidden": true
+    },
+    {
+      "id": "jobhunt",
+      "title": "Jobhunt",
+      "subtitle": "Placeholder project",
+      "roles": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "images": [],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "hidden": true
+    },
     {
       "id": "msr-insights",
       "title": "Measurabl: Insights Module",
@@ -87,4 +105,3 @@
     }
   ]
 }
-

@@ -13,6 +13,7 @@ export function renderApp(root: HTMLElement, manifest: Manifest) {
   main.id = 'content'
 
   for (const project of manifest.projects) {
+    if (project.hidden) continue
     main.appendChild(createPortfolioEntry(project))
   }
 
@@ -87,5 +88,4 @@ function renderHeader(manifest: Manifest) {
 
   return header
 }
-
 
