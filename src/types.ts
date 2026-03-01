@@ -22,11 +22,11 @@ export type Project = {
   roles?: string;
   images: ProjectImage[];
   description: string;
+  hidden?: boolean;
 }
 
 export type ProjectImage = {
   src: string;
   alt: string;
 }
-
 
